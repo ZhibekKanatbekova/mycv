@@ -1,0 +1,16 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "My experimental cv",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zhibek Kanatbekova",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-icons": "^1.3.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
+}

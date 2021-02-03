@@ -1,0 +1,113 @@
+
+
+
+html, body {
+    color: #434242;
+    font-family: 'Open Sans', sans-serif !important;
+
+}
+
+
+body {
+    background: #F3EFE0;
+    font-size: 15px;
+    line-height: 1.64}
+
+a {
+    color: #428bca;
+    text-decoration: none;
+}
+
+h1, h4 {
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+#first {
+background: url("/images/girl.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+background-size: cover;
+opacity: 0.7;
+height: 40rem;
+position: relative;
+text-align: center;
+height: 60rem;
+}
+
+.jumbotron .container h1 {
+padding-top: 8rem;
+padding-bottom: 2rem;
+    border-bottom: 1px solid #FFFFFF;
+    border-bottom-color: rgba(255,255,255,0.35);
+    display: inline-block;
+    font-size: 5rem;
+}
+
+.jumbotron .container > * {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.jumbotron .container .lead {
+    font-size: 28px;
+}
+
+.jumbotron p {
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 200;
+}
+
+.jumbotron .scroll-down {
+    height: 80px;
+    width: 110px;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    right: 5%;
+    background-color: #222222;
+    text-align: center;
+    z-index: 6;
+}
+
+.glyphicon {
+    color: #FFFFFF;
+    font-size: 30px;
+    padding-right: 2px;
+    padding-top: 30px;
+    -moz-animation: glyphicon 2s infinite;
+  -webkit-animation: glyphicon 2s infinite;
+  animation: glyphicon 2s infinite;
+}
+.glyphicon-chevron-down:before {
+    content: "\e114";
+}
+
+@keyframes glyphicon {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.fixed .navbar {
+    position: fixed;
+    top: 60px;
+}
+.navbar {
+    border: 0px;
+    background-color: #222222;
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    width: 110px;
+    z-index: 999;
+}
+
