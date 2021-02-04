@@ -1,39 +1,17 @@
+html, body { color: #434242; font-family: 'Open Sans', sans-serif !important; height: 100%; }
+body { background: #F3EFE0; font-size: 15px; line-height: 1.64; }
 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, strong, b { font-family: 'Open Sans', sans-serif !important; margin-bottom: 20px; }
+h1,h4 { font-weight: 700; margin-bottom: 10px; }
+h2,h3 { font-weight: 300; color: #22A39F; }
+h2 { font-size: 54px; text-align: center; }
+h3 { font-size: 28px; }
 
-
-html, body {
-    color: #434242;
-    font-family: 'Open Sans', sans-serif !important;
-
-}
-
-
-body {
-    background: #F3EFE0;
-    font-size: 15px;
-    line-height: 1.64}
-
-a {
-    color: #428bca;
-    text-decoration: none;
-}
-
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, strong, b {
-    font-family: 'Open Sans', sans-serif !important;
-    margin-bottom: 20px;
-}
-
-h1, h4 {
-    font-weight: 900;
-    margin-bottom: 15px;
-}
-h3 {
-    font-size: 28px;
-}
-h2, h3 {
-    font-weight: 300;
-    color: #22A39F;
-}
+p.lead {text-align: center;color: #727878;}
+p.lead a { color: #FFFFFF; text-decoration: underline; }
+p.lead a:hover { text-decoration: none; }
+ul.no-bullets { list-style-type: none; margin: 0px; padding: 0px; }
+hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity=20); }
 
 #first {
 background: url("/images/girl.jpg") no-repeat center center fixed;
@@ -89,15 +67,16 @@ padding-bottom: 2rem;
     font-size: 30px;
     padding-right: 2px;
     padding-top: 30px;
-    -moz-animation: glyphicon 2s infinite;
-  -webkit-animation: glyphicon 2s infinite;
-  animation: glyphicon 2s infinite;
+
 }
-.glyphicon-chevron-down:before {
+.glyphicon-chevron-down {
     content: "\e114";
+    -moz-animation: glyphicon-chevron-down 2s infinite;
+  -webkit-animation: glyphicon-chevron-down 2s infinite;
+  animation: glyphicon-chevron-down 2s infinite;
 }
 
-@keyframes glyphicon {
+@keyframes glyphicon-chevron-down {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
   }
@@ -121,26 +100,54 @@ padding-bottom: 2rem;
 
 .fixed .navbar  {position: fixed;top: 60px;}
 
-.background-white {
-    background: #FFFFFF;
+.background-white {background: #FFFFFF;}
+.background-gray { background: #434242; }
+.container { max-width: 1280px; padding: 40px 180px; }
+
+
+
+#profile .row > div { margin-bottom: 20px; }
+#profile .row > div img { width: 100%; max-width: 246px; height: auto; }
+
+#experiences .experience { margin-bottom: 20px; }
+#experiences .experience p > strong { display: block; padding-top: 8px; margin-bottom: 10px; }
+#experiences .experience .experience-details { display: block; margin-top: 6px; }
+#experiences .experience .experience-details * { color: #22A39F; }
+#experiences .experience .experience-details .seperator { color: #BCBCBC; }
+
+#abilities ul > li { min-height: 30px; padding: 3px 0px; }
+#abilities ul > li:hover { background: #F2F2F2; }
+#abilities ul > li .ability-title { display: inline-block; width: 60%; }
+#abilities ul > li .ability-score { float: right; }
+#abilities ul > li .ability-score .glyphicon {
+	color: #DFE0E0;
+	font-size: 14px;
+
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
-.container {
-    max-width: 1280px;
-    padding: 40px 180px;
+#abilities ul > li .ability-score .glyphicon.filled { color: #22A39F; }
+
+#abilities ul > li:hover .ability-score .glyphicon { margin-left: 2px; }
+
+#interests .left { float: left; }
+#interests .right { float: right; }
+#interests img { width: 80%; height: auto; }
+#interests .right img { float: right; }
+#interests .interest-content { padding: 40px 0px; }
+
+#interests .row:hover .left img {
+	-webkit-transform: rotate(-12deg);
+	-moz-transform: rotate(-12deg);
+	-ms-transform: rotate(-12deg);
+	-o-transform: rotate(-12deg);
 }
 
-hr {
-    margin: 40px 0px;
-    border-color: #727878;
-    opacity: 0.2;
-    filter: alpha(opacity=20);
-}
-
-#profile .row > div {
-    margin-bottom: 20px;
-}
-#profile .row > div img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
+#interests .row:hover .right img {
+	-webkit-transform: rotate(12deg);
+	-moz-transform: rotate(12deg);
+	-ms-transform: rotate(12deg);
+	-o-transform: rotate(12deg);
 }
