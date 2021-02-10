@@ -302,17 +302,17 @@
 
 
         <div class="row">
-
-
-                          <div class="col-md-6 col-sm-12 col-xs-12">
-                            <h3>To know the current weather please enter the city name </h3>
-                            <form action="/" method="POST">
+                          <div class="col-md-6 col-sm-12 col-xs-12 cityPicture">
+                            <h2>API: Application programming interfaces </h2>
+                            <h4>To know the current weather please enter the city name </h4>
+                            <form action="/" method="POST" class="form-group">
                               <label for="city">City Name</label>
-                              <input id="city" type="text" name="cityName" placeholder="Please enter the city name">
-                              <button type="submit">Submit</button>
+                              <input style="color: black;" id="city" type="text" name="cityName" autocomplete="off" placeholder="Enter the city name">
+                              <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
                             <div class="container">
-                                <p class="requestResult"><%= results%></p>
+                                <p><%=kaka%></p>
+                                <img src="<%=picture%>" alt="">
                             </div>
                           </div>
 

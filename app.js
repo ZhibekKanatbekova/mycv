@@ -12,8 +12,13 @@ app.set('view engine', 'ejs');
 
 app.use(express.static("public"));
 
+
+let result;
+let image
+
+
 app.get("/", function(req, res){
-  res.render("index")
+  res.render("index", { kaka: result , picture: image});
 })
 
 app.post("/", function (req, res) {
@@ -24,11 +29,14 @@ app.post("/", function (req, res) {
     response.on("data", function (data) {
       let weatherData = JSON.parse(data);
       let temp = weatherData.main.temp;
+      let humid = weatherData.main.humidity;
+      let desc = weatherData.weather[0].description;
       let icon = weatherData.weather[0].icon;
-      let image = "http://openweathermap.org/img/wn/" + icon + "@2x.png";;
-      let result = `The temperature in ${query} is ${temp}. ${image}`;
-      console.log(result)
-      res.render("index", {results: result})
+      image = "http://openweathermap.org/img/wn/" + icon + "@2x.png";;
+      result = `The temperature in ${query} is ${temp}°C and  it is ${desc}. \n
+       The humidity is ${humid}%. \n `;
+      console.log(weatherData)
+      res.redirect("/")
     });
   });
 });

@@ -169,6 +169,15 @@ padding-bottom: 2rem;
 	-o-transform: rotate(12deg);
 }
 
+.cityPicture{
+  background: url("/images/weather.jpg") no-repeat center  fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+background-size: cover;
+color: white;
+font-weight: 700 ;
+}
 
 
 #contact { padding-bottom: 200px; }
