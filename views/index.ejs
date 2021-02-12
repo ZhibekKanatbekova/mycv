@@ -307,8 +307,8 @@
                             <h4>To know the current weather please enter the city name </h4>
                             <form action="/" method="POST" class="form-group">
                               <label for="city">City Name</label>
-                              <input style="color: black;" id="city" type="text" name="cityName" autocomplete="off" placeholder="Enter the city name">
-                              <button type="submit" class="btn btn-primary">Submit</button>
+                              <input style="color: black;" id="city" type="text" name="cityName" autocomplete="off" placeholder="Enter the city name" >
+                              <button type="submit" formaction="/left" class="btn btn-primary">Submit</button>
                             </form>
                             <div class="container">
                                 <p><%=kaka%></p>
@@ -317,20 +317,19 @@
                           </div>
 
 
-                          <div class="col-md-6 col-sm-12 col-xs-12">
-                            <figure class="effect">
-                              <img src="/view/images/project_soap.jpg" alt="SOAP - Den Bosch">
-
-                              <figcaption>
-                                <h3>SOAP - Den Bosch</h3>
-                                <p>Build the website of the local barbershop.</p>
-                                <p><strong>Tags:</strong> <br>Design, Development, Bootstrap, Wordpress</p>
-                                <a href="http://soaphair.nl" target="_blank">View more</a>
-                                <span class="icon">
-                                  <span class="glyphicon glyphicon-new-window"></span>
-                                </span>
-                              </figcaption>
-                            </figure>
+                          <div class="col-md-6 col-sm-12 col-xs-12 notes">
+                              <h2>E J S</h2>
+                              <h4>Embedded JavaScript templating</h4>
+                              <p>Leave some notes, wishes for me</p>
+                              <form action="/" method="POST">
+                                  <div class="form-group">
+                                    <label>Your post</label>
+                                    <textarea name="composition" class="form-control" cols="40" rows="5";></textarea>
+                                    <label>Your name</label>
+                                    <input name="author" class="form-control" type="text">
+                                  </div>
+                                  <button type="submit" class="btn btn-primary">Publish</button>
+                              </form>
                           </div>
 
 

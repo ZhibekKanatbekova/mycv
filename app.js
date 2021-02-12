@@ -14,14 +14,20 @@ app.use(express.static("public"));
 
 
 let result;
-let image
+let image;
+let posts = [];
 
 
 app.get("/", function(req, res){
   res.render("index", { kaka: result , picture: image});
 })
 
-app.post("/", function (req, res) {
+app.get("/notes", function (req, res) {
+  res.render("notes", {posts:posts});
+});
+
+
+app.post("/left", function (req, res) {
   let query = req.body.cityName;
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=2d81a22eaf80f934ea7b4fd617c52681&units=metric`;
   https.get(url, function (response) {
@@ -42,7 +48,14 @@ app.post("/", function (req, res) {
 });
 
 
-
+app.post("/", function(req,res){
+    let post = {
+      author: req.body.author,
+      note:req.body.composition,
+    }
+    posts.push(post);
+    res.redirect("/notes");
+})
 
 
 
